@@ -1,0 +1,11 @@
+#-*- coding: utf-8 -*-
+# Create your views here.
+from django.shortcuts import render_to_response
+import json
+
+def hello(request):
+	geoarr = json.dumps({云水谣 : [24.626, 117.113]}, ensure_ascii=False)
+	maparr = json.dumps([[云水谣, [云水谣],["/static/pic/ysy.jpg", "/static/pic/ysy1.jpg", "/static/pic/ysy2.jpg"],], ], ensure_ascii=False)
+	
+	return render_to_response('index.html', locals())
+
